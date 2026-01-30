@@ -1,3 +1,3 @@
 ## Demo
 
-![Demo](Images/image.png)
+![Demo](Image/image.png)
