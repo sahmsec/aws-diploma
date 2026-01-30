@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
@@ -1022,6 +1025,44 @@
             box-shadow: 0 6px 20px var(--accent-glow);
         }
 
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            display: grid;
+            place-items: center;
+            color: var(--text-muted);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .social-icons a:hover {
+            background: var(--gradient);
+            color: white;
+            border-color: transparent;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px var(--accent-glow);
+        }
+
+        .social-icons .fa-brands {
+            font-size: 18px;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
             .timeline::before {
@@ -1105,6 +1146,16 @@
                 width: 100%;
                 justify-content: center;
             }
+            
+            /* Social icons on mobile */
+            .social-icons {
+                gap: 10px;
+            }
+            
+            .social-icons a {
+                width: 38px;
+                height: 38px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1144,6 +1195,21 @@
                 font-size: 1.1rem;
                 padding: 12px 20px;
             }
+            
+            /* Social icons on small mobile */
+            .social-icons {
+                gap: 8px;
+            }
+            
+            .social-icons a {
+                width: 36px;
+                height: 36px;
+                font-size: 16px;
+            }
+            
+            .social-icons .fa-brands {
+                font-size: 16px;
+            }
         }
 
         @media (max-width: 360px) {
@@ -1166,6 +1232,16 @@
             
             .section-title {
                 font-size: 1.6rem;
+            }
+            
+            .social-icons {
+                gap: 6px;
+            }
+            
+            .social-icons a {
+                width: 34px;
+                height: 34px;
+                font-size: 15px;
             }
         }
 
@@ -1936,7 +2012,7 @@
                 </div>
                 <div class="stat-box">
                     <span class="num">100%</span>
-                    <span class="txt">Freelancing-Focused</span>
+                    <span class="txt">Labs</span>
                 </div>
             </div>
         </div>
@@ -1951,34 +2027,35 @@
                         <i data-lucide="building-2" style="width:14px;height:14px"></i>
                         About Us
                     </span>
-                    <h1>Leading the Future of Cyber Security Education</h1>
-                    <p>At Arena Web Security Institute of Technology, we are committed to shaping the next generation of cybersecurity professionals. Our institute combines cutting-edge technology with industry expertise to deliver transformative education.</p>
-                    <p>Founded with a vision to bridge the skills gap in cybersecurity, we have trained over 5,000 professionals who are now securing digital infrastructures globally.</p>
+                    <h1>Government Recognized Technical Education Institute</h1>
+                    <p>Arena Web Security is a government-recognized technical education institute in Bangladesh, officially registered and accredited by the Bangladesh Technical Education Board (BTEB) and the National Skills Development Authority (NSDA), Government of the People's Republic of Bangladesh.</p>
+                    <p>We operate as an authorized technical and vocational education provider, delivering structured academic and professional diploma programs in Cyber Security in alignment with national education policies and skills development frameworks.</p>
+                    <p>Our academic activities are focused on curriculum-based instruction, laboratory-oriented learning, and applied cybersecurity education designed to meet both national and international standards.</p>
                     
-                    <div class="about-stats">
+                    <!-- <div class="about-stats">
                         <div class="about-stat">
-                            <span class="num" data-count="5000">0</span>
-                            <span class="label">Trained Professionals</span>
+                            <span class="num" data-count="2011">2011</span>
+                            <span class="label">Established Since</span>
                         </div>
                         <div class="about-stat">
-                            <span class="num" data-count="50">0</span>
-                            <span class="label">Industry Experts</span>
+                            <span class="num" data-count="5000">5,000+</span>
+                            <span class="label">Academic Alumni</span>
                         </div>
                         <div class="about-stat">
-                            <span class="num" data-count="100">0</span>
-                            <span class="label">Partner Companies</span>
+                            <span class="num">National Level</span>
+                            <span class="label">Recognized Programs</span>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 
                 <div class="about-image">
                     <div class="bento-card">
                         <div class="bento-icon">
-                            <i data-lucide="award" style="width:24px;height:24px;color:#fff"></i>
+                            <i data-lucide="book-open" style="width:24px;height:24px;color:#fff"></i>
                         </div>
-                        <h3>Our Excellence</h3>
-                        <p>Recognized as a premier cybersecurity training institute, we maintain a 98% placement rate with top-tier companies. Our curriculum is regularly updated to match industry demands.</p>
-                        <p>We believe in hands-on learning where students work on real-world projects from day one, preparing them for immediate impact in their careers.</p>
+                        <h3>Academic Background & Institutional Legacy</h3>
+                        <p>With over 14 years of academic journey, Arena Web Security has been actively contributing to the development of cybersecurity education in Bangladesh. Throughout this period, the institute has focused on building technically competent cybersecurity professionals through curriculum-driven instruction, laboratory-based training, and applied research practices.</p>
+                        <p>Our graduates are equipped with strong foundational knowledge and practical exposure aligned with global cybersecurity standards, contributing to the strengthening of digital security awareness and capacity building within the country.</p>
                     </div>
                 </div>
             </div>
@@ -1994,38 +2071,6 @@
                     <h3><i data-lucide="eye" style="width:20px;height:20px"></i> Our Vision</h3>
                     <p>To become the leading cybersecurity education hub in the region, recognized for producing world-class security professionals who drive innovation and secure the digital future.</p>
                     <p>We envision a world where every organization has access to skilled cybersecurity talent.</p>
-                </div>
-            </div>
-
-            <div class="section-header" style="margin-top: 60px;">
-                <span class="section-label">
-                    <i data-lucide="users" style="width:14px;height:14px"></i>
-                    Leadership Team
-                </span>
-                <h2 class="section-title">Meet Our Experts</h2>
-                <p class="section-desc">Our team consists of industry veterans with decades of cybersecurity experience.</p>
-            </div>
-
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="team-avatar"><span>AS</span></div>
-                    <h4>Dr. Ahmed Shah</h4>
-                    <div class="role">Founder & CEO</div>
-                    <p>Former CISO at multinational bank with 20+ years in cybersecurity and digital forensics.</p>
-                </div>
-                
-                <div class="team-member">
-                    <div class="team-avatar"><span>NR</span></div>
-                    <h4>Nadia Rahman</h4>
-                    <div class="role">Academic Director</div>
-                    <p>PhD in Cybersecurity, developed curriculum for Fortune 500 companies and government agencies.</p>
-                </div>
-                
-                <div class="team-member">
-                    <div class="team-avatar"><span>MK</span></div>
-                    <h4>Mohammad Khan</h4>
-                    <div class="role">Head of Training</div>
-                    <p>Certified Ethical Hacker with 15 years experience in penetration testing and red team operations.</p>
                 </div>
             </div>
         </div>
@@ -2125,20 +2170,6 @@
                     <div class="faq-a">
                         <div class="faq-a-inner">
                             HSC passed in any group (Science, Arts, or Commerce). Diploma students and Undergraduates from any background are welcome.
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-q">
-                        <h3>Is this course fully Virtual?</h3>
-                        <div class="faq-icon">
-                            <i data-lucide="chevron-down" style="width:16px;height:16px"></i>
-                        </div>
-                    </div>
-                    <div class="faq-a">
-                        <div class="faq-a-inner">
-                            Yes, all classes are conducted Virtual via live sessions. 2 classes per week, 2 hours each, plus 3 hours weekly support.
                         </div>
                     </div>
                 </div>
@@ -2316,6 +2347,31 @@
                         <li><a href="https://drive.google.com/file/d/1zUvuT2YHsbMWECLM0eCmvTh3nMh1GM2g/view" target="_blank" rel="noopener noreferrer">Diploma Module</a></li>
                         <li><a href="https://www.arenawebsecurity.net/admission-form" target="_blank" rel="noopener noreferrer">Apply Now</a></li>
                     </ul>
+                </div>
+                
+                <!-- Social Media Section -->
+                <div class="footer-links">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             
@@ -2598,6 +2654,9 @@
         console.log('2. Notice banner positioned below navbar');
         console.log('3. Enhanced mobile responsiveness');
         console.log('4. Improved contrast and readability');
+        console.log('5. Added Font Awesome social media icons in footer');
+        console.log('6. Removed "Meet Our Experts" section');
+        console.log('7. Updated About section with new content');
     </script>
 </body>
 </html>
