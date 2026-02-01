@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
 
   <style>
     /* CSS Reset */
@@ -2288,8 +2288,8 @@
           </div>
           <div class="faq-a">
             <div class="faq-a-inner">
-              Students must demonstrate real-world cybersecurity practice by earning at least USD 100 through verified
-              sources such as remote work, freelancing, or bug bounty programs.
+              Students must demonstrate real-world cybersecurity practice and complete an internship to be eligible for
+              certification.
             </div>
           </div>
         </div>
@@ -2382,7 +2382,7 @@
 
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" class="form-control" placeholder="you@example.com" required>
+              <input type="email" id="email" class="form-control" placeholder="Student mail" required>
             </div>
 
             <div class="form-group">
@@ -2450,7 +2450,8 @@
         <div class="footer-links">
           <h4>Follow Us</h4>
           <div class="social-icons">
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <a href="https://www.facebook.com/ArenaBangladesh" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook">
               <i class="fa-brands fa-facebook-f"></i>
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
@@ -2480,7 +2481,35 @@
 
   <script>
     // Initialize Lucide icons
-    lucide.createIcons();
+    if (window.lucide && typeof window.lucide.createIcons === 'function') { window.lucide.createIcons(); }
+
+    // Fail-safe: never keep the loader stuck on slow/blocked networks
+    (function () {
+      const pageTransition = document.getElementById('pageTransition');
+      if (!pageTransition) return;
+
+      // If something delays window 'load' (fonts/CDNs), force-hide after 1500ms
+      const hardTimeout = setTimeout(() => {
+        pageTransition.classList.remove('active');
+      }, 1500);
+
+      window.addEventListener('load', () => clearTimeout(hardTimeout), { once: true });
+    })();
+
+    // If Lucide loads late (defer), retry icons a few times
+    (function () {
+      let tries = 0;
+      const tick = () => {
+        tries++;
+        if (window.lucide && typeof window.lucide.createIcons === 'function') {
+          window.lucide.createIcons();
+          return;
+        }
+        if (tries < 6) setTimeout(tick, 300);
+      };
+      tick();
+    })();
+
 
     // Page loading animation
     window.addEventListener('load', () => {
@@ -2580,7 +2609,7 @@
             this.style.display = 'block';
             formSuccess.style.display = 'none';
             submitBtn.textContent = originalText;
-            lucide.createIcons();
+            if (window.lucide && typeof window.lucide.createIcons === 'function') { window.lucide.createIcons(); }
           }, 5000);
         }, 1500);
       });
